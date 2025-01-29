@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ai Image Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="hero">
+        <h2>Generate images using AI for free!</h2>
+        <p>You can now create realistic images and art from <br> a description in natural language.</p>
+
+        <form action="" class="generate_form">
+            <input type="text" placeholder="Describe what you want">
+            <div class="form_btn_grp">
+                <select name="" id="">
+                    <option value="1">1 Images</option>
+                    <option value="2">2 Images</option>
+                    <option value="3">3 Images</option>
+                    <option value="4">4 Images</option>
+                </select>
+                <button type="submit">Generate</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="image_gallery">
+        <div class="img_card">
+            <a class="download_btn" href="#">Download</a>
+            <img src="assets/images/testimg.png" alt="">
+        </div>
+        <div class="img_card">
+            <a class="download_btn" href="#">Download</a>
+            <img src="assets/images/testimg.png" alt="">
+        </div>
+        <div class="img_card">
+            <a class="download_btn" href="#">Download</a>
+            <img src="assets/images/testimg.png" alt="">
+        </div>
+        <div class="img_card loading">
+            <!-- <a class="download_btn" href="#">Download</a> -->
+            <!-- <img src="assets/images/testimg.png" alt=""> -->
+            <div class="loader"></div>
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>

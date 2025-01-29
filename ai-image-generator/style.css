@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gabarito", serif;
+    font-optical-sizing: auto;
+}
+
+.hero {
+    background: url(assets/images/bg.png);
+    height: auto;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* padding-top: 50px !important; */
+    padding: 60px 20px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    color: #f2edff;
+    text-align: center;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #ccc5df;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 300;
+}
+
+.hero form {
+    margin-top: 20px;
+    display: flex;
+    width: auto;
+    gap: 10px;
+    background: #fff;
+    height: 44px;
+    /* align-items: center; */
+    padding: 5px;
+    border-radius: 67px;
+    overflow: hidden;
+}
+
+.form_btn_grp {
+    display: flex;
+    gap: 10px;
+}
+
+.hero form input,
+.hero form select {
+    border: none;
+    height: 100%;
+    outline: none;
+    font-size: 16px;
+}
+
+.hero form input {
+    padding: 10px 15px;
+    width: 100%;
+}
+
+.hero form button {
+    background: #4320ff;
+    border: none;
+    height: auto;
+    padding: 5px 15px;
+    border-radius: 60px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.image_gallery {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    margin-top: 30px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.img_card {
+    width: 200px;
+    overflow: hidden;
+    border-radius: 7px;
+}
+
+.img_card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.img_card.loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+}
+
+@media only screen and (max-width: 600px) {
+    .hero form {
+        position: relative;
+        width: 100%;
+        overflow: unset;
+    }
+
+    .hero form select {
+        background: none;
+        color: #fff;
+    }
+
+    .hero form select option {
+        color: #000;
+    }
+
+    .form_btn_grp {
+        position: absolute;
+        top: 55px;
+        align-items: center;
+        right: 0;
+    }
+}
+
+
+.loader {
+    width: 50px;
+    --b: 8px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    padding: 1px;
+    background: conic-gradient(#0000 10%, #4320ff) content-box;
+    -webkit-mask:
+        repeating-conic-gradient(#0000 0deg, #000 1deg 20deg, #0000 21deg 36deg),
+        radial-gradient(farthest-side, #0000 calc(100% - var(--b) - 1px), #000 calc(100% - var(--b)));
+    -webkit-mask-composite: destination-in;
+    mask-composite: intersect;
+    animation: l4 1s infinite steps(10);
+}
+
+@keyframes l4 {
+    to {
+        transform: rotate(1turn)
+    }
+}
