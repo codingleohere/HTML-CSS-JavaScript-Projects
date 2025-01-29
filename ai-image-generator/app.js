@@ -1,6 +1,6 @@
 const generateForm = document.querySelector('.generate_form');
 const imageGallery = document.querySelector('.image_gallery');
-const OPENAI_API_KEY = "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"
+const OPENAI_API_KEY = ""
 
 const generateAiImages = async (userPrompt, userImageQuanmtity) => {
     try {
